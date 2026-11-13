@@ -1,172 +1,152 @@
-'''
-Author:     Sai Vignesh Golla
-LinkedIn:   https://www.linkedin.com/in/saivigneshgolla/
-
-Copyright (c) 2024-2026 Sai Vignesh Golla
-
-License:    MIT License
-            https://opensource.org/license/mit
-            
-GitHub:     https://github.com/GodsScion/Auto_job_applier_linkedIn
-
-Support me: https://github.com/sponsors/GodsScion
-
-version:    26.01.20.5.08
-'''
-
 
 ###################################################### APPLICATION INPUTS ######################################################
 
-
 # >>>>>>>>>>> Easy Apply Questions & Inputs <<<<<<<<<<<
 
-# Give an relative path of your default resume to be uploaded. If file in not found, will continue using your previously uploaded resume in LinkedIn.
-default_resume_path = "all resumes/default/resume.pdf"      # (In Development)
+default_resume_path = r"C:\Users\sujay\Downloads\Auto_job_applier_linkedIn-main (1)\Auto_job_applier_linkedIn-main\Sujay_Babu__Thota.pdf"
+# Combined professional and internship experience: approximately 1.5 years
+years_of_experience = "1"
 
-# What do you want to answer for questions that ask about years of experience you have, this is different from current_experience? 
-years_of_experience = "5"          # A number in quotes Eg: "0","1","2","3","4", etc.
+# India-based applications
+require_visa = "No"
 
-# Do you need visa sponsorship now or in future?
-require_visa = "No"               # "Yes" or "No"
+website = "https://sujaybabu.vercel.app/"
 
-# What is the link to your portfolio website, leave it empty as "", if you want to leave this question unanswered
-website = "https://github.com/GodsScion"                        # "www.example.bio" or "" and so on....
+linkedIn = "https://www.linkedin.com/in/sujaybabu/"
 
-# Please provide the link to your LinkedIn profile.
-linkedIn = "https://www.linkedin.com/in/saivigneshgolla/"       # "https://www.linkedin.com/in/example" or "" and so on...
+legally_authorized = "Yes"
 
-# Do you ALREADY have permission to work in the country you are applying to? (Eg: citizen, permanent resident, or a valid work visa such as H-1B or OPT)
-# This is NOT `require_visa`, which asks whether you need sponsorship. Someone on a valid work visa answers "Yes" to both.
-legally_authorized = "Yes"         # "Yes" or "No"
-
-# What is the status of your citizenship? # If left empty as "", tool will not answer the question. However, note that some companies make it compulsory to be answered
-# Valid options are: "U.S. Citizen/Permanent Resident", "Non-citizen allowed to work for any employer", "Non-citizen allowed to work for current employer", "Non-citizen seeking work authorization", "Canadian Citizen/Permanent Resident" or "Other"
-us_citizenship = "U.S. Citizen/Permanent Resident"
+# Indian citizenship (not a US citizen/permanent resident)
+us_citizenship = "Other"
 
 
+## SALARY DETAILS ##
 
-## SOME ANNOYING QUESTIONS BY COMPANIES 🫠 ##
+# Expected CTC: 9 LPA
+desired_salary = 600000
 
-# What to enter in your desired salary question (American and European), What is your expected CTC (South Asian and others)?, only enter in numbers as some companies only allow numbers,
-desired_salary = 1200000          # 80000, 90000, 100000 or 120000 and so on... Do NOT use quotes
-'''
-Note: If question has the word "lakhs" in it (Example: What is your expected CTC in lakhs), 
-then it will add '.' before last 5 digits and answer. Examples: 
-* 2400000 will be answered as "24.00"
-* 850000 will be answered as "8.50"
-And if asked in months, then it will divide by 12 and answer. Examples:
-* 2400000 will be answered as "200000"
-* 850000 will be answered as "70833"
-'''
+# Current CTC: ₹22,500/month × 12
+current_ctc = 300000
 
-# What is your current CTC? Some companies make it compulsory to be answered in numbers...
-current_ctc = 300000            # 800000, 900000, 1000000 or 1200000 and so on... Do NOT use quotes
-'''
-Note: If question has the word "lakhs" in it (Example: What is your current CTC in lakhs), 
-then it will add '.' before last 5 digits and answer. Examples: 
-* 2400000 will be answered as "24.00"
-* 850000 will be answered as "8.50"
-# And if asked in months, then it will divide by 12 and answer. Examples:
-# * 2400000 will be answered as "200000"
-# * 850000 will be answered as "70833"
-'''
+# Salary currency
+# currency = "INR"
 
-# (In Development) # Currency of salaries you mentioned. Companies that allow string inputs will add this tag to the end of numbers. Eg: 
-# currency = "INR"                 # "USD", "INR", "EUR", etc.
+# Notice period (verify with your employment agreement)
+notice_period = 15
 
-# What is your notice period in days?
-notice_period = 30                   # Any number >= 0 without quotes. Eg: 0, 7, 15, 30, 45, etc.
-'''
-Note: If question has 'month' or 'week' in it (Example: What is your notice period in months), 
-then it will divide by 30 or 7 and answer respectively. Examples:
-* For notice_period = 66:
-  - "66" OR "2" if asked in months OR "9" if asked in weeks
-* For notice_period = 15:"
-  - "15" OR "0" if asked in months OR "2" if asked in weeks
-* For notice_period = 0:
-  - "0" OR "0" if asked in months OR "0" if asked in weeks
-'''
 
-# Your LinkedIn headline in quotes Eg: "Software Engineer @ Google, Masters in Computer Science", "Recent Grad Student @ MIT, Computer Science"
-linkedin_headline = "Full Stack Developer with Masters in Computer Science and 4+ years of experience" # "Headline" or "" to leave this question unanswered
+## LINKEDIN PROFILE ##
 
-# Your summary in quotes, use \n to add line breaks if using single quotes "Summary".You can skip \n if using triple quotes """Summary"""
+linkedin_headline = "Junior Software Developer | Full Stack Developer | React Native | Next.js | Spring Boot | AI Integrations"
+
 linkedin_summary = """
-I'm a Senior Software Engineer at Amazon with Masters in CS and 4+ years of experience in developing and maintaining Full Stack Web applications and cloud solutions. 
-Specialized in React, Node.js, and Python.
+I'm a Full Stack Developer currently working as a Junior Software Developer at Techub, building production-ready web and mobile applications.
+
+I have experience in frontend and backend development, along with internship experience and freelance projects. I've worked with React, Next.js, React Native, TypeScript, Node.js, Spring Boot, Java, MySQL, PostgreSQL, and MongoDB.
+
+My experience includes developing REST APIs, authentication and role-based access control, admin dashboards, Android applications, and AI-powered applications using LLMs, RAG, and AI APIs.
+
+I'm a B.Tech graduate in Computer Science and Design with hands-on experience delivering real-world projects. I'm interested in SDE-1, Full Stack, Frontend, Backend, and AI Engineer opportunities.
 """
 
-'''
-Note: If left empty as "", the tool will not answer the question. However, note that some companies make it compulsory to be answered. Use \n to add line breaks.
-''' 
 
-# Your cover letter in quotes, use \n to add line breaks if using single quotes "Cover Letter".You can skip \n if using triple quotes """Cover Letter""" (This question makes sense though)
+## COVER LETTER ##
+
 cover_letter = """
-Cover Letter
+Dear Hiring Team,
+
+I am a Full Stack Developer currently working as a Junior Software Developer at Techub, with experience building production-ready web applications, Android applications, REST APIs, and backend systems.
+
+My technical skills include React, Next.js, React Native, TypeScript, JavaScript, Node.js, Spring Boot, Java, MySQL, PostgreSQL, and MongoDB. I also have hands-on experience with authentication, RBAC, Docker, and AI integrations.
+
+Alongside my professional experience, I have completed full-stack internships and developed multiple freelance and personal projects.
+
+I am interested in contributing my development skills, learning new technologies, and building scalable software products with your team.
+
+Portfolio: https://sujaybabu.vercel.app/
+GitHub: https://github.com/Sujay149
+LinkedIn: https://www.linkedin.com/in/sujaybabu/
+
+Best regards,
+Sujay Babu Thota
 """
-# Information about you that the AI can use when answering application questions.
-# Put anything an answer might need here, for example: name, years of experience,
-# key skills, location, work authorization, and so on. Use \n for line breaks.
+
+
+## INFORMATION FOR AI ANSWERS ##
+
 user_information_all = """
-User Information
+Full Name: Sujay Babu Thota
+
+Location: Hyderabad, India
+
+Education:
+B.Tech in Computer Science and Design, SRKR Engineering College.
+
+Professional Experience:
+Currently working as a Junior Software Developer at Techub.
+Experience developing production-ready web applications, Android apps, REST APIs, admin dashboards, and backend systems.
+
+Previous Experience:
+Full Stack Development internships at Brandverse and ASVIX MediBot.
+Freelance development experience with multiple real-world projects.
+
+Technical Skills:
+
+Frontend:
+React.js, Next.js, React Native, TypeScript, JavaScript, HTML, CSS, Tailwind CSS.
+
+Backend:
+Node.js, Express.js, Spring Boot, Java, REST APIs.
+
+Databases:
+MySQL, PostgreSQL, MongoDB, Firebase, Supabase.
+
+Other Technologies:
+Docker, Git, GitHub, CI/CD, JWT Authentication, RBAC, AI APIs, Prompt Engineering, RAG, LLM Integrations, n8n.
+
+Project Experience:
+- TaskPilot: Field team task management application.
+- CardBowl: Business card and relationship management application.
+- Crovia: Healthcare tracking application.
+- ASVIX MediBot: AI-powered healthcare assistant.
+- NeuroHub: GDG Campus Hackathon finalist project.
+- WonderKids: School management platform.
+
+Strengths:
+Full-stack development, mobile application development, API integration, database design, debugging, problem-solving, and building production-ready applications.
+
+Expected CTC: 9 LPA.
+Current CTC: 2.7 LPA (based on ₹22,500 monthly salary).
+Notice Period: 30 days (subject to confirmation).
+
+Work Authorization:
+Authorized to work in India.
+Indian citizen.
+Requires appropriate work authorization sponsorship for employment in countries where Indian citizens do not already have work authorization.
+
+Career Interests:
+SDE-1, Full Stack Developer, Frontend Developer, Backend Developer, React Native Developer, and AI Engineer.
+
+Portfolio: https://sujaybabu.vercel.app/
+GitHub: https://github.com/Sujay149
+LinkedIn: https://www.linkedin.com/in/sujaybabu/
+Email: sujayss149@gmail.com
 """
-'''
-Note: If left empty as "", the tool will not answer the question. However, note that some companies make it compulsory to be answered. Use \n to add line breaks.
-''' 
-
-# Name of your most recent employer
-recent_employer = "Not Applicable" # "", "Lala Company", "Google", "Snowflake", "Databricks"
-
-# Example question: "On a scale of 1-10 how much experience do you have building web or mobile applications? 1 being very little or only in school, 10 being that you have built and launched applications to real users"
-confidence_level = "8"             # Any number between "1" to "10" including 1 and 10, put it in quotes ""
-##
 
 
+# Most recent employer
+recent_employer = " Ravulapati Techub"
 
-# >>>>>>>>>>> RELATED SETTINGS <<<<<<<<<<<
-
-## Allow Manual Inputs
-# Should the tool pause before every submit application during easy apply to let you check the information?
-pause_before_submit = True         # True or False, Note: True or False are case-sensitive
-'''
-Note: Will be treated as False if `run_in_background = True`
-'''
-
-# Should the tool pause if it needs help in answering questions during easy apply?
-# Note: If set as False will answer randomly...
-pause_at_failed_question = True    # True or False, Note: True or False are case-sensitive
-'''
-Note: Will be treated as False if `run_in_background = True`
-'''
-##
-
-# Do you want to overwrite previous answers?
-overwrite_previous_answers = False # True or False, Note: True or False are case-sensitive
+# Confidence level
+confidence_level = "8"
 
 
+## RELATED SETTINGS ##
 
+pause_before_submit = True
 
+pause_at_failed_question = True
 
+overwrite_previous_answers = False
 
-
-############################################################################################################
-'''
-THANK YOU for using my tool 😊! Wishing you the best in your job hunt 🙌🏻!
-
-Sharing is caring! If you found this tool helpful, please share it with your peers 🥺. Your support keeps this project alive.
-
-Support my work on <PATREON_LINK>. Together, we can help more job seekers.
-
-As an independent developer, I pour my heart and soul into creating tools like this, driven by the genuine desire to make a positive impact.
-
-Your support, whether through donations big or small or simply spreading the word, means the world to me and helps keep this project alive and thriving.
-
-Gratefully yours 🙏🏻,
-Sai Vignesh Golla
-'''
-
-# --- Load user settings saved by the local control panel (user_config.json).
-# --- No-op if that file is absent: values fall back to the defaults above.
-from config import _overrides as _o
-_o.apply(__name__, globals())
-############################################################################################################
+######################################################
